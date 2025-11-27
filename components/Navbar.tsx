@@ -79,7 +79,7 @@ export const Navbar: React.FC = () => {
                     <Phone className="w-3 h-3 text-teal-500" />
                     <span className="text-xs font-bold tracking-wide">24/7 SUPPORT</span>
                 </div>
-                <span className="text-sm font-bold font-serif">+263 773 109 447</span>
+                <span className="text-sm font-bold font-serif">+263 773 768 592</span>
              </div>
             <Link
               to="/contact"

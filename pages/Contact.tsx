@@ -1,15 +1,54 @@
+
 import React from 'react';
 import { Mail, Phone, MapPin, Clock, HelpCircle, ChevronDown, MessageSquare } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SEO } from '../components/SEO';
 
 export const Contact: React.FC = () => {
+  const contactSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Energy Pool Investments",
+    "image": "https://picsum.photos/seed/ep_social/1200/600",
+    "telephone": "+263-773-768-592",
+    "email": "obertmandigo10@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "8278 Kirkman Gardens, Westlea",
+      "addressLocality": "Harare",
+      "addressRegion": "Harare",
+      "addressCountry": "ZW"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "08:00",
+        "closes": "13:00"
+      }
+    ],
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -17.82, // Approx Harare coords, strictly illustrative
+      "longitude": 31.05
+    },
+    "priceRange": "$$"
+  };
+
   return (
     <div className="pt-20">
       <SEO 
-        title="Contact Energy Pool | Get a Quote" 
-        description="Contact us for construction and waterproofing quotes in Zimbabwe. Located in Bluffhill, Harare. Call +263 773 109 447."
-        keywords="Contact construction company Harare, Waterproofing quote Zimbabwe, Maintenance inquiry, Energy Pool contact details"
+        title="Contact Us - Get a Quote"
+        description="Contact Energy Pool Zimbabwe for a free quote on waterproofing, plumbing, painting, or construction. Call +263 773 768 592 or visit us in Westlea, Harare."
+        keywords={["Contact Construction Company Harare", "Waterproofing Quote Zimbabwe", "Building Maintenance Phone Number"]}
+        schema={contactSchema}
+        type="business"
       />
       {/* Dark Hero Section for Navbar Visibility */}
       <div className="bg-slate-900 py-20 relative overflow-hidden">
@@ -36,7 +75,7 @@ export const Contact: React.FC = () => {
                 <ContactItem 
                     icon={<MapPin className="w-6 h-6 text-white" />}
                     title="Our Headquarters"
-                    content={<>752 Lorraine Drive, Bluffhill<br/>Harare, Zimbabwe</>}
+                    content={<>8278 Kirkman Gardens, Westlea<br/>Harare, Zimbabwe</>}
                 />
                 
                 <ContactItem 
@@ -44,9 +83,8 @@ export const Contact: React.FC = () => {
                     title="Phone Lines"
                     content={
                         <div className="space-y-1">
-                          <a href="tel:+263773109447" className="hover:text-teal-600 block transition-colors">+263 773 109 447 (Sales)</a>
-                          <a href="tel:+263779535636" className="hover:text-teal-600 block transition-colors">+263 779 535 636 (Support)</a>
-                          <a href="tel:+263712581919" className="hover:text-teal-600 block transition-colors">+263 712 581 919 (Office)</a>
+                          <a href="tel:+263773768592" className="hover:text-teal-600 block transition-colors">+263 773 768 592 (Sales & Support)</a>
+                          <a href="tel:+263773109447" className="hover:text-teal-600 block transition-colors">+263 773 109 447 (Office)</a>
                         </div>
                     }
                 />
@@ -56,8 +94,7 @@ export const Contact: React.FC = () => {
                     title="Email Address"
                     content={
                         <>
-                            sales@energypool.co.zw<br/>
-                            <span className="text-sm text-slate-400 mt-1 block">(Formerly sales@quickstructures.co.zw)</span>
+                            obertmandigo10@gmail.com<br/>
                         </>
                     }
                 />

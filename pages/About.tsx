@@ -7,9 +7,9 @@ export const About: React.FC = () => {
   return (
     <div className="pt-20">
       <SEO 
-        title="About Energy Pool | Company History" 
-        description="Learn about Energy Pool's journey from Fast Sheet in 2000 to becoming Zimbabwe's leading specialized maintenance and construction company."
-        keywords="Company history, Energy Pool profile, Construction directors Zimbabwe, Business profile"
+        title="About Us - Leading Construction Company"
+        description="Learn about Energy Pool's journey as Zimbabwe's leading maintenance contractor. Registered with NSSA and committed to excellence."
+        keywords={["Construction History Zimbabwe", "Energy Pool Profile", "Building Contractors Harare", "Reliable Construction Company"]}
       />
       {/* Header */}
       <div className="relative bg-slate-900 py-32 overflow-hidden">
@@ -26,7 +26,7 @@ export const About: React.FC = () => {
             <h1 className="text-5xl md:text-6xl font-serif font-bold text-white mb-6">About Us</h1>
             <div className="h-1 w-20 bg-teal-500 mx-auto mb-6"></div>
             <p className="text-xl text-slate-300 max-w-2xl mx-auto font-light leading-relaxed">
-              From Fast Sheet to Energy Pool: A legacy of specialized building maintenance and waterproofing excellence.
+              Energy Pool: A legacy of specialized building maintenance and waterproofing excellence.
             </p>
           </motion.div>
         </div>
@@ -47,7 +47,7 @@ export const About: React.FC = () => {
                 <div className="space-y-20">
                     <TimelineItem 
                         year="2000"
-                        title="Inception as Fast Sheet"
+                        title="Inception"
                         desc="The company was established primarily focusing on roof sheeting and basic repairs, gaining a reputation for reliability in Harare."
                         side="left"
                     />
@@ -59,7 +59,7 @@ export const About: React.FC = () => {
                     />
                     <TimelineItem 
                         year="2022"
-                        title="Rebranding to Quick Structures/Energy Pool"
+                        title="Evolution of Energy Pool"
                         desc="The company modernized its identity to reflect a broader scope of industrial capabilities, including epoxy flooring and large-scale waterproofing projects."
                         side="left"
                     />
@@ -92,10 +92,10 @@ export const About: React.FC = () => {
                       </div>
                   </div>
                   <div className="grid grid-cols-2 gap-4">
-                      <img src="https://picsum.photos/seed/torch_tool/400/500" alt="Torch Tool" className="rounded-lg shadow-lg w-full h-full object-cover" />
+                      <img src="https://images.unsplash.com/photo-1667207591347-86f12a549411" alt="Torch Tool" className="rounded-lg shadow-lg w-full h-full object-cover" />
                       <div className="space-y-4">
-                          <img src="https://picsum.photos/seed/paint_rollers/400/240" alt="Paint Equipment" className="rounded-lg shadow-lg w-full h-48 object-cover" />
-                          <img src="https://picsum.photos/seed/scaffold/400/240" alt="Access Equipment" className="rounded-lg shadow-lg w-full h-48 object-cover" />
+                          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd" alt="Paint Equipment" className="rounded-lg shadow-lg w-full h-48 object-cover" />
+                          <img src="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/scaffold_painting.jpg" alt="Access Equipment" className="rounded-lg shadow-lg w-full h-48 object-cover" />
                       </div>
                   </div>
               </div>

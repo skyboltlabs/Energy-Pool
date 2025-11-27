@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -24,13 +25,35 @@ const clientList = [
 ];
 
 export const Home: React.FC = () => {
+  const homeSchema = {
+    "@context": "https://schema.org",
+    "@type": "GeneralContractor",
+    "name": "Energy Pool Investments",
+    "url": "https://energypool.co.zw",
+    "logo": "https://energypool.co.zw/logo.png",
+    "sameAs": [
+      "https://facebook.com/energypool",
+      "https://instagram.com/energypool"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+263-773-768-592",
+      "contactType": "sales",
+      "areaServed": "ZW",
+      "availableLanguage": "English"
+    },
+    "description": "Leading construction and maintenance specialists in Zimbabwe offering waterproofing, epoxy flooring, painting, and plumbing services."
+  };
+
   return (
     <div className="overflow-hidden">
       <SEO 
-        title="Leading Construction & Waterproofing Company Zimbabwe"
-        description="Energy Pool is Zimbabwe's trusted contractor for Torch-on Waterproofing, Epoxy Flooring, Painting, and Industrial Maintenance. Serving Harare, Bulawayo and nationwide."
-        keywords="Construction Zimbabwe, Waterproofing Harare, Torch-on, Epoxy Flooring, General Maintenance, Razor Wire, Building Contractors Zimbabwe"
+        title="Construction, Waterproofing & Maintenance Experts"
+        description="Energy Pool is Zimbabwe's premier contractor for torch-on waterproofing, industrial epoxy flooring, painting, and general building maintenance. 23+ years experience."
+        keywords={["General Contractor Zimbabwe", "Building Maintenance", "Industrial Flooring", "Waterproofing Specialists"]}
+        schema={homeSchema}
       />
+
       {/* Hero Section with Ken Burns Effect */}
       <section className="relative h-screen min-h-[700px] flex items-center overflow-hidden">
         {/* Background Image */}
@@ -39,9 +62,11 @@ export const Home: React.FC = () => {
             initial={{ scale: 1 }}
             animate={{ scale: 1.1 }}
             transition={{ duration: 20, repeat: Infinity, repeatType: "reverse", ease: "linear" }}
-            src="https://picsum.photos/seed/roof_waterproof/1920/1080" 
-            alt="Waterproofing and Maintenance" 
+            src="https://images.unsplash.com/photo-1599707254554-027aeb4deacd" 
+            alt="Energy Pool Team at Work" 
             className="w-full h-full object-cover"
+            // Eager load hero image for LCP
+            fetchPriority="high"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/70 to-slate-900/20"></div>
         </div>
@@ -60,12 +85,12 @@ export const Home: React.FC = () => {
             
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white leading-[0.95] mb-8 drop-shadow-lg">
               Expert <br/>
-              Waterproofing <br/>
+              Building Construction <br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-teal-200">& Maintenance.</span>
             </h1>
             
             <p className="text-xl md:text-2xl text-slate-300 mb-10 max-w-2xl leading-relaxed font-light">
-              Specializing in Torch-on systems, Epoxy Flooring, Painting, Plumbing, and comprehensive industrial maintenance solutions.
+              Specializing in Building Construction, Torch-on systems, Epoxy Flooring, Painting, Plumbing, and comprehensive industrial maintenance solutions.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-5">
@@ -122,10 +147,10 @@ export const Home: React.FC = () => {
             >
               <h2 className="text-sm font-bold text-teal-600 uppercase tracking-widest mb-4">Who We Are</h2>
               <h3 className="text-4xl md:text-5xl font-serif font-bold text-slate-900 mb-8 leading-tight">
-                Specialized Maintenance & Restoration
+                Specialized Construction & Maintenance
               </h3>
               <p className="text-slate-600 mb-6 leading-relaxed text-lg font-light">
-                Energy Pool is Zimbabwe's premier contractor for specialized building maintenance. We don't just build; we protect, seal, coat, and secure your assets. From torch-on roof waterproofing to industrial epoxy flooring and high-security razor wire installations, we deliver precision craftsmanship.
+                Energy Pool is Zimbabwe's premier contractor for building construction and specialized maintenance. We don't just build; we protect, seal, coat, and secure your assets. From new builds to torch-on roof waterproofing, industrial epoxy flooring and high-security razor wire installations, we deliver precision craftsmanship.
               </p>
               <div className="bg-slate-50 p-6 border-l-4 border-teal-500 mb-8">
                 <p className="italic text-slate-700 font-serif text-lg">
@@ -148,9 +173,10 @@ export const Home: React.FC = () => {
                 className="relative z-10"
               >
                 <img 
-                  src="https://picsum.photos/seed/painter_industrial/800/1000" 
-                  alt="Industrial Painting" 
+                  src="https://images.unsplash.com/photo-1589109807644-924edf14ee09" 
+                  alt="Industrial Flooring" 
                   className="w-full h-auto object-cover rounded shadow-2xl"
+                  loading="lazy"
                 />
               </motion.div>
               {/* Decorative Elements */}
@@ -206,11 +232,18 @@ export const Home: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+             <ServiceCard 
+              icon={<Building2 className="w-10 h-10" />}
+              title="Building Construction"
+              description="Complete building services from foundation to roof, including new structures and major renovations."
+              image="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/brick_house.jpg"
+              link="/services"
+            />
             <ServiceCard 
               icon={<Droplets className="w-10 h-10" />}
               title="Waterproofing & Guttering"
               description="Industrial torch-on systems, roof shingle repairs, and guttering installation to keep your property dry."
-              image="https://picsum.photos/seed/torchon_roof/600/400"
+              image="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/roof_roller.jpg"
               link="/waterproofing"
               highlight
             />
@@ -218,14 +251,14 @@ export const Home: React.FC = () => {
               icon={<PaintBucket className="w-10 h-10" />}
               title="Painting & Epoxy"
               description="High-traffic epoxy flooring and premium interior/exterior painting for commercial and industrial facilities."
-              image="https://picsum.photos/seed/epoxy_floor/600/400"
+              image="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/epoxy_floor.jpg"
               link="/services"
             />
              <ServiceCard 
               icon={<Wrench className="w-10 h-10" />}
               title="General Maintenance"
               description="Plumbing, ceilings, razor wire security, and comprehensive facility repairs."
-              image="https://picsum.photos/seed/plumbing_pipe/600/400"
+              image="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/ceiling_work.jpg"
               link="/services"
               
             />
@@ -239,21 +272,21 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
-      {/* Construction in Action - New Image Grid */}
+      {/* Construction in Action - Real Project Images */}
       <section className="bg-slate-900 border-t border-slate-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
             <h2 className="text-sm font-bold text-teal-400 uppercase tracking-widest mb-3">On Site</h2>
             <h3 className="text-3xl font-serif font-bold text-white mb-8">Specialists At Work</h3>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 w-full">
-            <ActionImage seed="torch_on" title="Torch-on Application" />
-            <ActionImage seed="gutter_install" title="Guttering" />
-            <ActionImage seed="painter_wall" title="Painting" />
-            <ActionImage seed="epoxy_roller" title="Epoxy Flooring" />
-            <ActionImage seed="razor_wire" title="Razor Wire Install" />
-            <ActionImage seed="plumber_pipe" title="Plumbing" />
-            <ActionImage seed="ceiling_install" title="Ceilings" />
-            <ActionImage seed="welder_steel" title="Maintenance" />
+            <ActionImage src="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/roof_torch.jpg" title="Torch-on Waterproofing" />
+            <ActionImage src="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/gutter_repair.jpg" title="Gutter Installation" />
+            <ActionImage src="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/scaffold_painting.jpg" title="Industrial Painting" />
+            <ActionImage src="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/epoxy_floor.jpg" title="Epoxy Flooring" />
+            <ActionImage src="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/ceiling_work.jpg" title="Ceiling Installation" />
+            <ActionImage src="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/tiled_roof.jpg" title="Roof Maintenance" />
+            <ActionImage src="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/roof_roller.jpg" title="Bitumen Priming" />
+            <ActionImage src="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/brick_house.jpg" title="General Construction" />
         </div>
       </section>
 
@@ -289,7 +322,7 @@ export const Home: React.FC = () => {
       {/* CTA Section */}
       <section className="py-32 relative overflow-hidden bg-slate-900">
         <div className="absolute inset-0 z-0">
-            <img src="https://picsum.photos/seed/roof_finish/1920/800" alt="Roof Finish" className="w-full h-full object-cover opacity-20" />
+            <img src="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/tiled_roof.jpg" alt="Roof Finish" className="w-full h-full object-cover opacity-20" loading="lazy" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent"></div>
         </div>
         
@@ -321,7 +354,7 @@ const StatItem: React.FC<{ number: string, label: string, icon: React.ReactNode 
 const ServiceCard: React.FC<{ icon: React.ReactNode, title: string, description: string, link: string, highlight?: boolean, image: string }> = ({ icon, title, description, link, highlight, image }) => (
   <Link to={link} className="group relative block h-full overflow-hidden rounded-lg shadow-sm hover:shadow-xl transition-all duration-500 bg-white">
     <div className="h-48 overflow-hidden">
-      <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+      <img src={image} alt={title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" loading="lazy" />
     </div>
     <div className="p-8 relative">
       <div className={`absolute -top-8 left-8 p-4 rounded shadow-lg ${highlight ? 'bg-teal-600 text-white' : 'bg-white text-teal-600'}`}>
@@ -359,12 +392,13 @@ const AdvantageCard: React.FC<{ icon: React.ReactNode, title: string, desc: stri
   </div>
 );
 
-const ActionImage: React.FC<{ seed: string, title: string }> = ({ seed, title }) => (
+const ActionImage: React.FC<{ src: string, title: string }> = ({ src, title }) => (
     <div className="group relative h-64 overflow-hidden">
         <img 
-            src={`https://picsum.photos/seed/${seed}/600/600`} 
+            src={src} 
             alt={title} 
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 filter grayscale group-hover:grayscale-0" 
+            loading="lazy"
         />
         <div className="absolute inset-0 bg-teal-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
             <div className="text-center transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">

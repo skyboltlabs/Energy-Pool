@@ -34,7 +34,7 @@ export const Footer: React.FC = () => {
               <li><Link to="/about" className="hover:text-teal-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3" /> About Us</Link></li>
               <li><Link to="/services" className="hover:text-teal-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3" /> Our Services</Link></li>
               <li><Link to="/projects" className="hover:text-teal-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3" /> Recent Projects</Link></li>
-              <li><Link to="/waterproofing" className="text-teal-400 font-semibold hover:text-teal-300 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3" /> Torch-on Systems</Link></li>
+              <li><Link to="/waterproofing" className="hover:text-teal-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3" /> Torch-on Systems</Link></li>
               <li><Link to="/contact" className="hover:text-teal-400 transition-colors flex items-center gap-2"><ArrowRight className="w-3 h-3" /> Request Quote</Link></li>
             </ul>
           </div>
@@ -45,6 +45,7 @@ export const Footer: React.FC = () => {
               <span className="w-8 h-0.5 bg-teal-500 inline-block"></span> Core Trades
             </h3>
             <ul className="space-y-3 text-sm text-slate-400">
+              <li className="hover:text-white transition-colors">Building Construction</li>
               <li className="hover:text-white transition-colors">Roof Waterproofing (Torch-on)</li>
               <li className="hover:text-white transition-colors">Epoxy Flooring & Painting</li>
               <li className="hover:text-white transition-colors">Plumbing & Guttering</li>
@@ -62,19 +63,15 @@ export const Footer: React.FC = () => {
             <ul className="space-y-4">
               <li className="flex items-start group">
                 <MapPin className="w-5 h-5 mr-3 text-teal-500 flex-shrink-0 mt-0.5 group-hover:text-white transition-colors" />
-                <span className="group-hover:text-white transition-colors">752 Lorraine Drive,<br />Bluffhill, Harare, Zimbabwe</span>
+                <span className="group-hover:text-white transition-colors">8278 Kirkman Gardens,<br />Westlea, Harare, Zimbabwe</span>
               </li>
               <li className="flex items-center group">
                 <Phone className="w-5 h-5 mr-3 text-teal-500 flex-shrink-0 group-hover:text-white transition-colors" />
-                <span className="group-hover:text-white transition-colors">+263 773 109 447</span>
-              </li>
-               <li className="flex items-center group">
-                <Phone className="w-5 h-5 mr-3 text-teal-500 flex-shrink-0 group-hover:text-white transition-colors" />
-                <span className="group-hover:text-white transition-colors">+263 779 535 636</span>
+                <span className="group-hover:text-white transition-colors">+263 773 768 592</span>
               </li>
               <li className="flex items-center group">
                 <Mail className="w-5 h-5 mr-3 text-teal-500 flex-shrink-0 group-hover:text-white transition-colors" />
-                <span className="group-hover:text-white transition-colors">sales@energypool.co.zw</span>
+                <span className="group-hover:text-white transition-colors">obertmandigo10@gmail.com</span>
               </li>
             </ul>
           </div>

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ZoomIn, ArrowRight, Quote } from 'lucide-react';
@@ -6,21 +7,21 @@ import { SEO } from '../components/SEO';
 
 const projects = [
   // Waterproofing
-  { id: 1, category: 'Waterproofing', title: 'Cresta Hotel Roof Refurbishment', image: 'https://picsum.photos/seed/hotel_roof/1200/900', client: 'Cresta Hotels', desc: 'Complete torch-on waterproofing of the main hotel roof deck, including gutter replacement.' },
-  { id: 2, category: 'Waterproofing', title: 'Turnall Factory Roof Sealing', image: 'https://picsum.photos/seed/factory_roof/1200/900', client: 'Turnall', desc: 'Heavy-duty industrial waterproofing and IBR sheet sealing for manufacturing plant.' },
-  { id: 3, category: 'Waterproofing', title: 'Private Residence Shingle Roof', image: 'https://picsum.photos/seed/shingle_roof/1200/900', client: 'Private Client', desc: 'Repair and sealing of asphalt shingle roofing system.' },
+  { id: 1, category: 'Waterproofing', title: 'Roof Refurbishment', image: 'https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/roof_roller.jpg', client: 'Cresta Hotels', desc: 'Complete torch-on waterproofing of the main hotel roof deck, including gutter replacement.' },
+  { id: 2, category: 'Waterproofing', title: 'Turnall Factory Roof Sealing', image: 'https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/roof_tank.jpg', client: 'Turnall', desc: 'Heavy-duty industrial waterproofing and IBR sheet sealing for manufacturing plant.' },
+  { id: 3, category: 'Waterproofing', title: 'Private Residence Shingle Roof', image: 'https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/tiled_roof.jpg', client: 'Private Client', desc: 'Repair and sealing of asphalt shingle roofing system.' },
   
   // Finishes (Painting/Epoxy)
-  { id: 4, category: 'Finishes', title: 'Precision Grinders Epoxy Floor', image: 'https://picsum.photos/seed/epoxy_workshop/1200/900', client: 'Precision Grinders', desc: 'Installation of high-traffic chemical resistant epoxy flooring in the main workshop.' },
-  { id: 5, category: 'Finishes', title: 'OK Mart Interior Renovation', image: 'https://picsum.photos/seed/mall_paint/1200/900', client: 'OK Mart', desc: 'Complete interior painting and tiling for the retail floor.' },
-  { id: 6, category: 'Finishes', title: 'Apartment Complex Exterior', image: 'https://picsum.photos/seed/exterior_paint/1200/900', client: 'Property Manager', desc: 'Full exterior painting and crack filling for a 20-unit complex.' },
+  { id: 4, category: 'Finishes', title: 'Precision Grinders Epoxy Floor', image: 'https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/epoxy_floor.jpg', client: 'Precision Grinders', desc: 'Installation of high-traffic chemical resistant epoxy flooring in the main workshop.' },
+  { id: 5, category: 'Finishes', title: 'Renovation', image: 'https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/ceiling_work.jpg', client: 'OK Mart', desc: 'Complete interior painting and tiling.' },
+  { id: 6, category: 'Finishes', title: 'Apartment Complex Exterior', image: 'https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/wall_construction.jpg', client: 'Property Manager', desc: 'Full exterior painting and crack filling for a 20-unit complex.' },
 
   // Maintenance & Utilities
-  { id: 7, category: 'Maintenance', title: 'Delta Beverages Guttering', image: 'https://picsum.photos/seed/guttering/1200/900', client: 'Delta Beverages', desc: 'Fabrication and installation of large-scale industrial box gutters.' },
-  { id: 8, category: 'Maintenance', title: 'School Plumbing Overhaul', image: 'https://picsum.photos/seed/plumbing/1200/900', client: 'Government School', desc: 'Renovation of sanitary ware and drainage systems for school ablutions.' },
-  { id: 9, category: 'Maintenance', title: 'Perimeter Razor Wire', image: 'https://picsum.photos/seed/razorwire/1200/900', client: 'Gated Community', desc: 'Installation of high-security flat wrap razor wire along perimeter walls.' },
-  { id: 10, category: 'Maintenance', title: 'Factory Ventilation System', image: 'https://picsum.photos/seed/ventilation/1200/900', client: 'Industrial Client', desc: 'Installation of whirlybirds and air ducts for factory cooling.' },
-  { id: 11, category: 'Maintenance', title: 'Suspended Ceilings', image: 'https://picsum.photos/seed/ceiling/1200/900', client: 'Corporate Office', desc: 'Installation of acoustic suspended ceilings and LED lighting.' },
+  { id: 7, category: 'Maintenance', title: 'Guttering', image: 'https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/gutter_repair.jpg', client: 'Delta Beverages', desc: 'Fabrication and installation of large-scale industrial box gutters.' },
+  { id: 8, category: 'Maintenance', title: 'Plumbing Overhaul', image: 'https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/roof_prep.jpg', client: 'Government School', desc: 'Renovation of sanitary ware and drainage systems for school ablutions.' },
+  { id: 9, category: 'Maintenance', title: 'Perimeter Razor Wire', image: 'https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/brick_house.jpg', client: 'Gated Community', desc: 'Installation of high-security flat wrap razor wire along perimeter walls.' },
+  { id: 10, category: 'Maintenance', title: 'Factory Ventilation System', image: 'https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/roof_tank.jpg', client: 'Industrial Client', desc: 'Installation of whirlybirds and air ducts for factory cooling.' },
+  { id: 11, category: 'Maintenance', title: 'Balcony Waterproofing', image: 'https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/balcony_work.jpg', client: 'The Aperture Complex', desc: 'installation of a robust two-ply bituminous membrane system on a cantilevered concrete balcony.' },
 ];
 
 export const Projects: React.FC = () => {
@@ -35,9 +36,9 @@ export const Projects: React.FC = () => {
   return (
     <div className="pt-20 bg-slate-50 min-h-screen">
       <SEO 
-        title="Construction Projects Gallery" 
-        description="View our portfolio of completed projects including waterproofing, epoxy flooring, industrial painting, and maintenance for clients like Delta Beverages and Turnall."
-        keywords="Construction projects Zimbabwe, Epoxy flooring portfolio, Waterproofing case studies, Industrial maintenance projects"
+        title="Our Projects & Portfolio"
+        description="View our portfolio of successful construction and maintenance projects, including waterproofing for Turnall, Cresta Hotels, and epoxy flooring for industrial clients."
+        keywords={["Construction Portfolio Zimbabwe", "Waterproofing Projects", "Industrial Flooring Gallery", "Building Renovation Examples"]}
       />
       <div className="bg-slate-900 text-white py-20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/black-scales.png')] opacity-30"></div>
@@ -53,7 +54,7 @@ export const Projects: React.FC = () => {
               <div className="flex flex-col lg:flex-row gap-12 items-center">
                   <div className="w-full lg:w-1/2">
                       <div className="relative overflow-hidden rounded-lg shadow-2xl group">
-                          <img src="https://picsum.photos/seed/waterproof_detail/1200/800" alt="Featured Project" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-1000" />
+                          <img src="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/roof_torch.jpg" alt="Featured Project" className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-1000" loading="lazy" />
                           <div className="absolute top-4 left-4 bg-teal-600 text-white text-xs font-bold px-3 py-1 rounded uppercase tracking-wider">Featured Project</div>
                       </div>
                   </div>
@@ -114,6 +115,7 @@ export const Projects: React.FC = () => {
                       src={project.image} 
                       alt={project.title} 
                       className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
+                      loading="lazy"
                     />
                   </div>
                   <div className="absolute inset-0 bg-slate-900/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-6 text-center">

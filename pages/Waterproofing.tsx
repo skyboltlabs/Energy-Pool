@@ -1,37 +1,22 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Droplets, CheckCircle2, ShieldAlert, Umbrella, Layers, Sun, PenTool, Check } from 'lucide-react';
 import { SEO } from '../components/SEO';
 
 export const Waterproofing: React.FC = () => {
-  const waterproofingSchema = {
-    "@type": "RoofingContractor",
-    "priceRange": "$$",
-    "serviceArea": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": -17.824858,
-        "longitude": 31.053028
-      },
-      "geoRadius": "50000"
-    },
-    "knowsAbout": ["Torch-on Waterproofing", "Bitumen", "Roof Repair", "Guttering", "Damp Proofing"]
-  };
-
   return (
     <div className="pt-20">
       <SEO 
-        title="Torch-on Waterproofing & Roof Repair Harare" 
-        description="Expert industrial roof waterproofing using Torch-on bitumen systems. Fix roof leaks, install guttering, and seal concrete decks. Best waterproofing in Zimbabwe."
-        keywords="Torch-on waterproofing Zimbabwe, Roof leaks Harare, Waterproofing contractors, Bitumen roof sealer, Gutter installation Harare, Concrete deck sealing"
-        schema={waterproofingSchema}
+        title="Roof Waterproofing & Torch-on Specialists"
+        description="Expert roof waterproofing services in Zimbabwe. We use industrial torch-on bitumen membranes to fix roof leaks on concrete decks and flat roofs. 10-year warranty."
+        keywords={["Roof Waterproofing Zimbabwe", "Torch-on Waterproofing", "Roof Leak Repair Harare", "Bitumen Waterproofing", "Concrete Deck Sealing"]}
       />
       {/* Hero */}
       <section className="relative h-[70vh] min-h-[500px] flex items-center">
         <div className="absolute inset-0">
           <img 
-            src="https://picsum.photos/seed/roofwaterproof/1920/1080" 
+            src="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/roof_torch.jpg" 
             alt="Waterproofing work" 
             className="w-full h-full object-cover"
           />
@@ -126,8 +111,8 @@ export const Waterproofing: React.FC = () => {
                 </div>
                 <div className="relative">
                     <div className="grid grid-cols-2 gap-4">
-                        <img src="https://picsum.photos/seed/torchon1/400/500" className="rounded-lg shadow-xl w-full h-full object-cover transform translate-y-8" alt="Torch on application" />
-                        <img src="https://picsum.photos/seed/roofrepair/400/500" className="rounded-lg shadow-xl w-full h-full object-cover" alt="Roof repair" />
+                        <img src="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/roof_prep.jpg" className="rounded-lg shadow-xl w-full h-full object-cover transform translate-y-8" alt="Torch on application" />
+                        <img src="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/balcony_work.jpg" className="rounded-lg shadow-xl w-full h-full object-cover" alt="Roof repair" />
                     </div>
                     <div className="absolute -z-10 top-10 right-10 w-full h-full border-2 border-blue-200 rounded-lg"></div>
                 </div>
@@ -159,7 +144,7 @@ export const Waterproofing: React.FC = () => {
       {/* Call to action */}
       <div className="relative py-24 bg-slate-900 overflow-hidden">
           <div className="absolute inset-0 opacity-20">
-               <img src="https://picsum.photos/seed/rain/1920/600" alt="Rain" className="w-full h-full object-cover" />
+               <img src="https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/tiled_roof.jpg" alt="Rain" className="w-full h-full object-cover" />
           </div>
           <div className="relative max-w-4xl mx-auto px-4 text-center text-white z-10">
               <h2 className="text-4xl font-serif font-bold mb-6">Before the next rain, call Energy Pool.</h2>
@@ -168,7 +153,7 @@ export const Waterproofing: React.FC = () => {
                 <Link to="/contact" className="bg-blue-500 text-white font-bold px-10 py-4 rounded hover:bg-blue-600 transition-colors">
                     Request Quote
                 </Link>
-                <a href="tel:+263773109447" className="bg-transparent border border-blue-500 text-blue-400 font-bold px-10 py-4 rounded hover:bg-blue-900/50 transition-colors">
+                <a href="tel:+263773768592" className="bg-transparent border border-blue-500 text-blue-400 font-bold px-10 py-4 rounded hover:bg-blue-900/50 transition-colors">
                     Call Now
                 </a>
               </div>

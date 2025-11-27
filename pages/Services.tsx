@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
@@ -10,7 +11,7 @@ const mainServices = [
     desc: "Our core specialty. We utilize industrial-grade torch-on bitumen systems to seal flat roofs, concrete decks, and foundations. We also provide guttering installation and shingle roof repairs.",
     features: ["Torch-on Waterproofing", "Roof Leak Repairs", "Guttering & Flashings", "Roof Shingles", "Concrete Deck Sealing", "Damp Proofing"],
     icon: <Droplets className="w-6 h-6" />,
-    image: "https://picsum.photos/seed/torchon_apply/800/600",
+    image: "https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/roof_roller.jpg",
     id: "waterproofing",
     link: "/waterproofing"
   },
@@ -19,7 +20,7 @@ const mainServices = [
     desc: "Enhance and protect your surfaces. We offer specialized epoxy flooring for industrial warehouses and garages, as well as premium interior and exterior painting services.",
     features: ["Industrial Epoxy Flooring", "Interior/Exterior Painting", "Floor Tiling", "Surface Preparation", "Protective Coatings", "Road Marking"],
     icon: <PaintBucket className="w-6 h-6" />,
-    image: "https://picsum.photos/seed/epoxy_floor_2/800/600",
+    image: "https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/epoxy_floor.jpg",
     id: "finishes"
   },
   {
@@ -27,7 +28,7 @@ const mainServices = [
     desc: "Secure and finish your property. We install high-tensile razor wire for perimeter security and offer comprehensive ceiling solutions including IBR and suspended ceilings.",
     features: ["Razor Wire Installation", "IBR Ceilings", "Suspended Ceilings", "Partitioning (Aluminium/Timber)", "Perimeter Fencing", "Security Gates"],
     icon: <Scissors className="w-6 h-6" />,
-    image: "https://picsum.photos/seed/razor_wire/800/600",
+    image: "https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/ceiling_work.jpg",
     id: "security"
   },
   {
@@ -35,7 +36,7 @@ const mainServices = [
     desc: "Complete utility maintenance. From pipe ducting and sanitary ware installation to factory ventilation and general repairs, we keep your facility running smoothly.",
     features: ["Industrial Plumbing", "Pipe Ducting", "Factory Ventilation", "Sanitary Ware Install", "Air Conditioning Ducts", "General Repairs"],
     icon: <Pipette className="w-6 h-6" />,
-    image: "https://picsum.photos/seed/plumbing_fix/800/600",
+    image: "https://raw.githubusercontent.com/skyboltlabs/Energy-Pool/refs/heads/main/assets/gutter_repair.jpg",
     id: "maintenance"
   }
 ];
@@ -69,30 +70,12 @@ const secondaryServices = [
 ];
 
 export const Services: React.FC = () => {
-  const servicesSchema = {
-    "@type": "Service",
-    "serviceType": [
-      "Waterproofing", 
-      "Epoxy Flooring", 
-      "Industrial Painting", 
-      "Razor Wire Installation", 
-      "Plumbing", 
-      "Guttering"
-    ],
-    "provider": {
-      "@type": "GeneralContractor",
-      "name": "Energy Pool"
-    },
-    "areaServed": "Zimbabwe"
-  };
-
   return (
     <div className="pt-20">
       <SEO 
-        title="Construction & Maintenance Services Zimbabwe" 
-        description="Comprehensive list of services: Torch-on waterproofing, epoxy flooring, industrial painting, plumbing, razor wire security, and ceiling installation in Zimbabwe."
-        keywords="Epoxy flooring Zimbabwe, Industrial Painting Contractors, Razor wire installation Harare, Plumbing services Zimbabwe, Ceiling installers"
-        schema={servicesSchema}
+        title="Our Services - Waterproofing, Painting & Plumbing"
+        description="Comprehensive maintenance services including Epoxy Flooring, Razor Wire installation, Suspended Ceilings, and Industrial Plumbing in Zimbabwe."
+        keywords={["Epoxy Flooring Harare", "Razor Wire Installers", "Plumbers Zimbabwe", "Industrial Painting"]}
       />
       {/* Header */}
       <div className="bg-slate-900 py-24 relative overflow-hidden">
